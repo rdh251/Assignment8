@@ -351,7 +351,7 @@ function removeTabs() {
         selectHolder.append(submit);
         remover.append(selectHolder)
     } else {
-        $('#messageSpan').text('There are no tables to delete, please Create a new table.');
+        $('#messageSpan').text('There are no tables to delete, please create a new table.');
     }
 }
 function deleter() {
