@@ -1,0 +1,47 @@
+<!--
+	Ross Hall
+	ross_hall@student.uml.edu
+	UMass Lowell Computer Science Student
+	COMP 4610 GUI Programming 1
+	Assignment No.7: Using the jQuery Validation Plugin with Your Dynamic Table
+    11/24/2018
+    
+    Description: This is a single page web application that displays
+    a multiplication table dynamically based on inputs from the user.
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <title>Multiplication Table</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.18.0/jquery.validate.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    </head>
+    <body>
+            <div id="tabs">
+                    <ul>
+                      <li><a href="#fragment-1">One</a></li>
+                      <li><a href="#fragment-2">Two</a></li>
+                      <li><a href="#fragment-3">Three</a></li>
+                    </ul>
+                    <div id="fragment-1">
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    </div>
+                    <div id="fragment-2">
+                      consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    </div>
+                    <div id="fragment-3">
+                      sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    </div>
+                  </div>
+
+        <script>
+            (function($){
+                $("#tabs").tabs();
+            })(jQuery);
+        </script>
+    </body>
+</html>

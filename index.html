@@ -1,0 +1,69 @@
+<!--
+	Ross Hall
+	ross_hall@student.uml.edu
+	UMass Lowell Computer Science Student
+	COMP 4610 GUI Programming 1
+	Assignment No.8: Using the jQuery UI Slider and Tab Widget
+    12/4/2018
+    
+    Description: This is a single page web application that displays
+    a multiplication tables in tabs dynamically based on inputs from the user.
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <title>Multiplication Table</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.18.0/jquery.validate.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="javascript/calculate.js"></script>
+    </head>
+    <body>
+        <div id='wrapper'>
+            <h1>Multiplication Table</h1>
+            <div id='banner'>
+                <form id="inputForm" action="" onsubmit="return false">
+                        <button type="submit">Create Table</button>
+                        <button type="button" onclick="removeTabs()">Delete Table</button>
+                        <ul id='inputs'>
+                            <li>
+                                <label>X Bound:</label><br>
+                                <div id="loXSlide" class="slide"></div>
+                                <input type="text" name="field1" autocomplete="off" value=1 id="lowerX"/>
+                            </li>
+                            <li>
+                                <label>X Bound:</label><br>
+                                <div id="hiXSlide" class="slide"></div>
+                                <input type="text" name="field2" autocomplete="off" value=1 id="upperX"/>
+                            </li>
+                            <li>
+                                <label>Y Bound:</label><br>
+                                <div id="loYSlide" class="slide"></div>
+                                <input type="text" name="field3" autocomplete="off" value=1 id="lowerY"/>
+                            </li>
+                            <li>
+                                <label>Y Bound:</label><br>
+                            <div id="hiYSlide" class="slide"></div>
+                            <input type="text" name="field4" autocomplete="off" value=1 id="upperY"/>
+                        </li>
+                    </ul>
+                </form> 
+            </div>
+            <div id="tabRemover" class="hide">
+                <p>Select the tables you would like to delete.<p>
+            </div>
+            <div id="infoBox">
+                <span id="messageSpan">Please enter bounds for the x-axis and y-axis of the multiplication table.</span>
+            </div>
+            <div id='tableHolder'>  <!--The table will be built here-->
+                <div id='myTabs'>
+                    <ul id="theTabs"></ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
